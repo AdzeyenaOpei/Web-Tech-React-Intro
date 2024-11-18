@@ -1,5 +1,4 @@
 import React from "react";
-
 function Navbar() {
   return (
     <div className="bg-blue-500 text-white p-5 flex justify-between">
@@ -9,8 +8,8 @@ function Navbar() {
       </div>
 
       <nav className="flex gap-2">
-        <a href=""> Home</a>
-        <a href=""> About</a>
+        <a href="/"> Home</a>
+        <a href="/about"> About</a>
       </nav>
     </div>
   );

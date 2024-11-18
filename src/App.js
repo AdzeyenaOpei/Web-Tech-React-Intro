@@ -1,27 +1,30 @@
 // Dependencies
 import React from "react";
 import Navbar from "./Component/Navbar";
-import RecipeCard from "./Component/RecipeCard";
+import Footer from "./Component/Footer";
+import Home from "./Component/Home";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Styles
 import "./tailwind.output.css";
+import About from "./Component/About";
 
-const recipeList = [
-  { image: "/image/Beans.jpg", name: "Beans" },
-  { image: "/image/Rice.jpg", name: "Rice" },
-  { image: "/image/Beans.jpg", name: "Beans" },
-  { image: "/image/Rice.jpg", name: "Rice" },
-  { image: "/image/Beans.jpg", name: "Beans" },
-  { image: "/image/Rice.jpg", name: "Rice" },
-];
+
 
 const App = () => {
   return (
     <div className="min-h-screen bg-green-600 p-2">
       <Navbar />
-      {recipeList.map((list) => {
-        <RecipeCard image={list.image} name={list.name} />;
-      })}
-      <RecipeCard image="/image/Beans.jpg" name="Beans" />
+
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
+      
+      
+
+    <Footer/>
     </div>
   );
 };
