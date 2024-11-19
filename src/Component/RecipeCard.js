@@ -2,7 +2,7 @@ import React from "react";
 
 function RecipeCard({ image, name }) {
   return (
-    <div className="border p-4 rounded-lg shadow-md bg-blue-600">
+    <div className="border p-4 rounded-lg shadow-md bg-blue-600 mt-4">
       <img
         src={image}
         alt={name}

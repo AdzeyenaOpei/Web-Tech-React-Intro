@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Styles
 import "./tailwind.output.css";
 import About from "./Component/About";
+import Categories from "./Component/Categories";
 
 
 
@@ -19,6 +20,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/category" element={<Categories />} />
         </Routes>
       </Router>
       
